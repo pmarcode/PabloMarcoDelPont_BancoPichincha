@@ -8,23 +8,20 @@ import {
   Param,
 } from '@nestjs/common';
 
-import { Sequelize, Model, DataTypes } from 'sequelize';
-import DataSource from '../../datasource/dataSource';
-import { Metrics } from '../../entities/metrics.entity';
-
+import Metrics from '../../models/metrics';
+import Tribe from '../../models/tribe';
 
 @Controller('metrics')
 export class MetricsController {
-  dataSource: DataSource;
+  metrics: Metrics;
+  tribe: Tribe;
   constructor() {
-    this.dataSource = new DataSource();
+    this.metrics = new Metrics();
+    this.tribe = new Tribe();
   }
 
   @Get('getRepositoriesMetricsByTribe/:id')
   async index() {
-    const metrics = await Metrics(this.dataSource.getDataSource());
-    const m1 = await metrics.create({id_repository: 1});
-    const ms = await metrics.findAll();
-    return ms;
+    return this.tribe.getAll();
   }
 }

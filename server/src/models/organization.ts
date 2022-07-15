@@ -5,7 +5,7 @@ export interface Organization {
 }
 
 const organizations: Organization[] = [
-    '1',
+    'Banco Pichincha',
     '2',
     '3'
 ].map((text, index) => ({
