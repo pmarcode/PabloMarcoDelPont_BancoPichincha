@@ -12,7 +12,7 @@ npm start
 Una vez que esté corriendo el servidor se pueden ejecutar los tests en una nueva terminal.
 Se debe reiniciar el servidor antes de correr los tests para asegurar datos limpios.
 
-'''npm test'''
+```npm test```
 
 ### Usar un cliente REST para probar los endpoints.
 
