@@ -3,10 +3,10 @@ import {
   Get
 } from '@nestjs/common';
 
-import repositories, { Repository } from '../../models/repository';
+import { repositories, IRepository } from '../../models/repository';
 
 interface Repositories {
-  repositories: Repository[];
+  repositories: IRepository[];
 }
 
 @Controller('repositories')

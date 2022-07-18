@@ -1,27 +1,18 @@
-import {
-  Controller,
-  Get,
-  Post,
-  Put,
-  Delete,
-  Body,
-  Param,
-} from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
+import TestData from '../../models/testData';
 
 import Metrics from '../../models/metrics';
-import Tribe from '../../models/tribe';
 
 @Controller('metrics')
 export class MetricsController {
   metrics: Metrics;
-  tribe: Tribe;
   constructor() {
     this.metrics = new Metrics();
-    this.tribe = new Tribe();
+    TestData();
   }
 
   @Get('getRepositoriesMetricsByTribe/:id')
   async index() {
-    return this.tribe.getAll();
+    return await this.metrics.getAll();
   }
 }

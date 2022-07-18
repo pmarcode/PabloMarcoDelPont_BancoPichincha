@@ -1,13 +1,14 @@
 import { Sequelize, DataTypes } from "sequelize";
 
-export default class DataSource{
-    dataSource: any;
+export default class DataSource {
+    static dataSource;
     
-    constructor(){
-        this.dataSource = new Sequelize('sqlite::memory:');
-    }
+    private constructor(){}
 
-    getDataSource(){
-        return this.dataSource;
+    public static getDataSource(): DataSource {
+        if(!DataSource.dataSource){
+            DataSource.dataSource = new Sequelize('sqlite::memory:');
+        }
+        return DataSource.dataSource;
     }
 }
