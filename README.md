@@ -1,6 +1,6 @@
 # PabloMarcoDelPont_BancoPichincha
 
-Luego de clonar el repositorio:
+Luego de clonar el repositorio hay que instalar las dependencias y correr el servidor en una terminal con los siguientes comandos:
 ```
 cd server
 npm install
