@@ -47,3 +47,9 @@ GET http://localhost:8080/repositories/getVerificationCodes
 Obtener las métricas de repositorio según tribu:
 
 GET http://localhost:8080/metrics/getRepositoriesMetricsByTribe/1
+
+Generar reporte CSV con las métricas de repositorio según tribu:
+
+En el navegador acceder a la url:
+
+http://localhost:8080/metrics/csv/getRepositoriesMetricsByTribe/1
