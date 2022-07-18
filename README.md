@@ -48,8 +48,8 @@ Obtener las métricas de repositorio según tribu:
 
 GET http://localhost:8080/metrics/getRepositoriesMetricsByTribe/1
 
-Generar reporte CSV con las métricas de repositorio según tribu:
+### Reporte CSV
 
-En el navegador acceder a la url:
+Para generar el reporte CSV con las métricas de repositorio según tribu hay que acceder en el navegador a la url:
 
 http://localhost:8080/metrics/csv/getRepositoriesMetricsByTribe/1
