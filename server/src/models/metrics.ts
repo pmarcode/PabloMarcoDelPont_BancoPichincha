@@ -18,3 +18,6 @@ export default class Metrics {
         });
     }
 }
+export function getHumanReadableCoverage(coverage){
+    return coverage + '%';
+}

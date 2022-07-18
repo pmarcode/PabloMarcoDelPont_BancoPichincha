@@ -27,3 +27,12 @@ export default class Repository {
         return await repositoryEntity.findAll();
     }
 }
+
+export function getHumanReadableState(state){
+    const states = {
+        E: 'Activo',
+        D: 'Inactivo',
+        A: 'Archivado'
+    };
+    return states[state];
+}

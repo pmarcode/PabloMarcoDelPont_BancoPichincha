@@ -37,7 +37,7 @@ export default async function(){
         id_repository: 2,
         id_tribe: 1,
         name: 'cd-common-text',
-        state: 'E',
+        state: 'A',
         create_time: 1658151588,
         status: 'A'
     });
